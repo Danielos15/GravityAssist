@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Danni_mainCopy.unity
+- path: Assets/Arnar_maincopy.unity
   isLoaded: 1
   isActive: 1
