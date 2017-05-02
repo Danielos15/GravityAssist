@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Arnar_maincopy.unity
-=======
 - path: Assets/Main.unity
->>>>>>> a3c01ce807a6fbe72b343327ea4b2658fa453837
   isLoaded: 1
   isActive: 1
