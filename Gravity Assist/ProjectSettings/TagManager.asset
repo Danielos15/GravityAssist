@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Astroids
-  - CelestialObject
-<<<<<<< HEAD
-  - GameManager
-=======
-  - Boundary
->>>>>>> 28bdf87fe8a3864ca3db898283547befee505d61
+  tags: []
   layers:
   - Default
   - TransparentFX
