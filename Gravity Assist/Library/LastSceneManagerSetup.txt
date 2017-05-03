@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Arnar_mainCopy.unity
-  isLoaded: 1
-  isActive: 1
