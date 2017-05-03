@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour {
 	public float forceForward;
 	public float rotateSpeed;
 	private GameController gameManager;
+	public GameObject afterburners;
 
 
 	// Use this for initialization
@@ -28,6 +29,9 @@ public class PlayerMovement : MonoBehaviour {
 			}
 			rigid.AddForce (transform.up * forceForward * Time.deltaTime);
 			fuel -= fuelPerSec * Time.deltaTime;
+			afterburners.SetActive(true);
+		} else {
+			afterburners.SetActive(false);
 		}
 		if (Input.GetButton ("Horizontal")) {
 			trans.Rotate (-trans.forward * rotateSpeed * Input.GetAxis ("Horizontal") * Time.deltaTime);
