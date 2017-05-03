@@ -13,4 +13,8 @@ public class GameController : MonoBehaviour {
 	public bool isStarted() {
 		return started;
 	}
+
+	public void endGame() {
+		started = false;
+	}
 }

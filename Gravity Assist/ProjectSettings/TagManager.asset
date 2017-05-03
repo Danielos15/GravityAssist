@@ -6,7 +6,11 @@ TagManager:
   tags:
   - Astroids
   - CelestialObject
+<<<<<<< HEAD
   - GameManager
+=======
+  - Boundary
+>>>>>>> 28bdf87fe8a3864ca3db898283547befee505d61
   layers:
   - Default
   - TransparentFX

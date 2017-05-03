@@ -8,12 +8,14 @@ public class Gravity : MonoBehaviour {
 	private Transform trans;
 	private Rigidbody2D rigid;
 	private GameController gameManager;
+	private AsteroidMovement asteroidStarted;
 
 	// Use this for initialization
 	void Start () {		
 		trans = GetComponent<Transform> ();
 		rigid = GetComponent<Rigidbody2D> ();
 		gameManager = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController> ();
+		asteroidStarted = GameObject.FindGameObjectWithTag ("Astroids").GetComponent<AsteroidMovement> ();
 	}
 
 	void FixedUpdate() {
