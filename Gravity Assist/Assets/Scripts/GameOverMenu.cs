@@ -11,6 +11,7 @@ public class GameOverMenu : MonoBehaviour {
 
 	public GameObject replayPanel;
 	public GameObject mainMenuPanel;
+	public Object nextScene;
 
 	/*void Awake() {
 		gameManager = GameObject.FindGameObjectWithTag ("GameManager").GetComponent<GameManager> ();
@@ -30,6 +31,10 @@ public class GameOverMenu : MonoBehaviour {
 		if (button.name == "Restart") {
 			scene = SceneManager.GetActiveScene ();
 			SceneManager.LoadScene (scene.name);
+		}
+
+		if (button.name == "NextLevel") {
+			SceneManager.LoadScene (nextScene.name);
 		}
 	}
 

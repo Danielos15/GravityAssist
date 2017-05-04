@@ -108,6 +108,12 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &61977100 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114585244423025752, guid: 8f1da29df988175429d524907528bb0d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1370577490}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &320636731 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1088665249825220, guid: 8f1da29df988175429d524907528bb0d,
@@ -177,6 +183,11 @@ Prefab:
       propertyPath: levelWonPanel
       value: 
       objectReference: {fileID: 320636731}
+    - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
+        type: 2}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 61977100}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dfb426c5fe0a144382ce04d552e8c31, type: 2}
   m_IsPrefabParent: 0

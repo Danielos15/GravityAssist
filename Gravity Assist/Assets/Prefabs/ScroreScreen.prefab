@@ -28,7 +28,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1162034320505564
 GameObject:
   m_ObjectHideFlags: 1
@@ -404,6 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   replayPanel: {fileID: 1088665249825220}
   mainMenuPanel: {fileID: 1088665249825220}
+  nextScene: {fileID: 102900000, guid: 09c18494b991b4c49832affd8bd8fe9d, type: 3}
 --- !u!114 &114052258541716784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -444,6 +445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   replayPanel: {fileID: 1716560413579716}
   mainMenuPanel: {fileID: 1716560413579716}
+  nextScene: {fileID: 0}
 --- !u!114 &114097560881286198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1355,12 +1357,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 114036753874261130}
+        m_MethodName: ButtonMenu
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgument: {fileID: 114941397481721512}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
