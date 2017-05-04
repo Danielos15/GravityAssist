@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState{
-	Menu,	//default menu state
-	NewGame,	//Load objects into game
-	Start		//Playing the game
-}
-
 public class GameManager : MonoBehaviour {
+	public enum GameState{
+		Menu,	//default menu state
+		NewGame,	//Load objects into game
+		Start,		//Playing the game
+		Quit,
+		About
+	}
 
 	public GameState gameState;
 
