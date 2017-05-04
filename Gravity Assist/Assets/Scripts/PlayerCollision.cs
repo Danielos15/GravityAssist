@@ -28,10 +28,8 @@ public class PlayerCollision : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.tag == "Astroid" || other.gameObject.tag == "CelestialObject") {
+		if ((other.gameObject.tag == "Astroid" || other.gameObject.tag == "CelestialObject") && gameManager.isStarted()) {
 			Destroy (gameObject);
-			//TODO:
-			// Explosion, scorescreen
 			gameOverPanel.SetActive(true);
 
 		} else if (other.gameObject.tag == "Finish") {
