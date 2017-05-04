@@ -38,6 +38,16 @@ public class PlayerCollision : MonoBehaviour {
 			gameManager.endGame ();
 		}
 	}
+
+
+	void OnTriggerExit2D(Collider2D other) {
+		if (other.gameObject.tag == "OutofBounds" && gameManager.isStarted()) {
+			Destroy (gameObject);
+			gameOverPanel.SetActive(true);
+			gameManager.endGame ();
+		}
+	}
+
 	void OnTriggerStay2D(Collider2D other) {
 		if (other.gameObject.tag == "Finish") {
 			if (finishDelay > 0.0f) {

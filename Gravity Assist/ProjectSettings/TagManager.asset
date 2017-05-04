@@ -7,6 +7,7 @@ TagManager:
   - CelestialObject
   - GameManager
   - Astroid
+  - OutofBounds
   layers:
   - Default
   - TransparentFX
