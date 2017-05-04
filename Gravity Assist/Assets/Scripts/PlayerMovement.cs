@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour {
 	private GameController gameManager;
 	public GameObject afterburners;
 
-
 	// Use this for initialization
 	void Start () {
 		trans = GetComponent<Transform> ();
