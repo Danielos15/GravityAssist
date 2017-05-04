@@ -36,7 +36,9 @@ public class PlayerCollision : MonoBehaviour {
 				trans.Rotate (trans.forward * 240 * Time.deltaTime);
 				trans.localScale = Vector3.Lerp (trans.localScale, new Vector3 (0.01f, 0.01f, 0.01f), 0.05f);
 			} else {
+				Destroy (gameObject);
 				Debug.Log ("Level Done!"); // TODO: Show score screen
+				gameManager.endGame();
 				shipCollider.isTrigger = false;
 			}
 		}
