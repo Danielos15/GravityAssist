@@ -6,13 +6,11 @@ public class AsteroidMovement : MonoBehaviour {
 
 	private Rigidbody2D rb;
 	public float speed;
-	private bool started;
 
 	// Use this for initialization
 	void Start () {
-		rb = GetComponent<Rigidbody2D> ();
-		rb.velocity = -transform.up + (transform.right/2) * speed;
-		started = true;
+		//rb = GetComponent<Rigidbody2D> ();
+		//rb.velocity = -transform.up + (transform.right/2) * speed;
 	}
 	
 	// Update is called once per frame

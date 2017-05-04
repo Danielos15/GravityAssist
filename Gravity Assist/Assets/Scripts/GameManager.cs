@@ -20,10 +20,10 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (gameState = GameState.NewGame) {
+		/*if (gameState = GameState.NewGame) {
 			//Instantiate the player into the game
 			//(Set camera to his position)
-		}
+		}*/
 
 
 	}

@@ -15,7 +15,6 @@ public class Gravity : MonoBehaviour {
 		trans = GetComponent<Transform> ();
 		rigid = GetComponent<Rigidbody2D> ();
 		gameManager = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController> ();
-		asteroidStarted = GameObject.FindGameObjectWithTag ("Astroids").GetComponent<AsteroidMovement> ();
 	}
 
 	void FixedUpdate() {
