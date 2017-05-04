@@ -9,9 +9,6 @@ public class LevelSelectMenu : MonoBehaviour {
 	GameManager gameManager;
 
 	public void levelButtons(Button button) {
-		
-		if (button.name == "Level1") {
-			SceneManager.LoadScene ("Main");
-		}
+		SceneManager.LoadScene ("Levels/"+button.name);
 	}
 }
