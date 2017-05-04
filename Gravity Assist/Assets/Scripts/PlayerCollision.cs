@@ -6,6 +6,7 @@ public class PlayerCollision : MonoBehaviour {
 
 	GameController gameManager;
 	public GameObject gameOverPanel;
+	public GameObject levelWonPanel;
 
 	private Transform trans;
 	private Rigidbody2D rigid;
@@ -29,6 +30,7 @@ public class PlayerCollision : MonoBehaviour {
 
 		} else if (other.gameObject.tag == "Finish") {
 			gameManager.endGame ();
+			levelWonPanel.SetActive (true);
 		}
 	}
 	void OnTriggerStay2D(Collider2D other) {
