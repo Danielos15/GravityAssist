@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour {
 
 	GameController gameManager;
+	public GameObject gameOverPanel;
+
 	private Transform trans;
 	private Rigidbody2D rigid;
 
@@ -20,6 +22,8 @@ public class PlayerCollision : MonoBehaviour {
 			Destroy (gameObject);
 			//TODO:
 			// Explosion, scorescreen
+			gameOverPanel.SetActive(true);
+
 		} else if (other.gameObject.tag == "Finish") {
 			gameManager.endGame ();
 		}
