@@ -34,7 +34,16 @@ public class GameOverMenu : MonoBehaviour {
 		}
 
 		if (button.name == "NextLevel") {
-			SceneManager.LoadScene (nextScene.name);
+			Debug.Log (SceneManager.GetActiveScene ().name);
+			if (SceneManager.GetActiveScene ().name == "level_1") {
+				SceneManager.LoadScene ("Levels/level_2");
+			}
+			if (SceneManager.GetActiveScene ().name == "level_2") {
+				SceneManager.LoadScene ("Levels/level_3");
+			}
+			if (SceneManager.GetActiveScene ().name == "level_3") {
+				SceneManager.LoadScene ("MainMenu");
+			}
 		}
 	}
 
