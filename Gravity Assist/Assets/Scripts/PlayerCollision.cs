@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCollision : MonoBehaviour {
 
 	GameController gameManager;
 	public GameObject gameOverPanel;
 	public GameObject levelWonPanel;
+	public Text scoreText;
 
 	private Transform trans;
 	private Rigidbody2D rigid;
 	private CapsuleCollider2D shipCollider;
 	public float finishDelay;
+
+	private PlayerMovement pm;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +23,8 @@ public class PlayerCollision : MonoBehaviour {
 		trans = GetComponent<Transform> ();
 		rigid = GetComponent<Rigidbody2D> ();
 		gameManager = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController> ();
+
+		pm = GetComponent<PlayerMovement> ();
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
@@ -30,7 +36,6 @@ public class PlayerCollision : MonoBehaviour {
 
 		} else if (other.gameObject.tag == "Finish") {
 			gameManager.endGame ();
-			levelWonPanel.SetActive (true);
 		}
 	}
 	void OnTriggerStay2D(Collider2D other) {
@@ -43,9 +48,11 @@ public class PlayerCollision : MonoBehaviour {
 				trans.localScale = Vector3.Lerp (trans.localScale, new Vector3 (0.01f, 0.01f, 0.01f), 0.05f);
 			} else {
 				Destroy (gameObject);
-				Debug.Log ("Level Done!"); // TODO: Show score screen
+		
 				gameManager.endGame();
 				shipCollider.isTrigger = false;
+				scoreText.text = "Score: " + Mathf.Round(pm.fuel);
+				levelWonPanel.SetActive (true);
 			}
 		}
 	}
