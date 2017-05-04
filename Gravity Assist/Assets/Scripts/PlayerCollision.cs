@@ -27,7 +27,7 @@ public class PlayerCollision : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D other) {
 		if (other.gameObject.tag == "Finish") {
 			rigid.velocity = Vector2.zero;
-			trans.position = Vector2.MoveTowards (trans.position, other.GetComponent<Transform> ().position, 5.0f* Time.deltaTime);
+			trans.position = Vector2.MoveTowards (trans.position, other.GetComponent<Transform> ().position, 5.0f * Time.deltaTime);
 		}
 	}
 }
