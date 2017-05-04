@@ -23,7 +23,7 @@ public class Gravity : MonoBehaviour {
 		foreach (Collider2D col in colliders) {
 			Rigidbody2D rb = col.attachedRigidbody;
 			if (rb != null && rb != this.rigid && !rbs.Contains (rb)) {
-				if (col.gameObject.tag == "Player" && gameManager.isStarted ()) {
+				if ((col.gameObject.tag == "Player" && gameManager.isStarted ()) || col.gameObject.tag == "NOTNOW") {
 					rbs.Add (rb);
 					Vector2 offset = trans.position - col.transform.position;
 					rb.AddForce (offset / offset.sqrMagnitude * this.rigid.mass);
