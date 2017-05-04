@@ -76,5 +76,6 @@ public class PlayerMovementMouse : MonoBehaviour {
 			gameManager.startGame ();
 			isLaunched = true;
 		}
+		trans.up = rigid.velocity;
 	}
 }
