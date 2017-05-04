@@ -147,6 +147,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114945068495044570, guid: 1dfb426c5fe0a144382ce04d552e8c31,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114402424071299098, guid: 1dfb426c5fe0a144382ce04d552e8c31,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
+        type: 2}
+      propertyPath: finishDelay
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dfb426c5fe0a144382ce04d552e8c31, type: 2}
   m_IsPrefabParent: 0
@@ -401,7 +416,7 @@ ParticleSystem:
   m_GameObject: {fileID: 869303068}
   serializedVersion: 5
   lengthInSec: 5
-  simulationSpeed: 0.15
+  simulationSpeed: 0.1
   looping: 1
   prewarm: 0
   playOnAwake: 1
@@ -3551,7 +3566,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1206565972}
   serializedVersion: 5
   lengthInSec: 5
-  simulationSpeed: 0.15
+  simulationSpeed: 0.05
   looping: 1
   prewarm: 0
   playOnAwake: 1
@@ -3598,13 +3613,13 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1908510804
+  randomSeed: 1100028800
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.13
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3742,7 +3757,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.021196784, g: 0.2794118, b: 0, a: 0.7058824}
+      maxColor: {r: 0.021196784, g: 0.2794118, b: 0, a: 0.39215687}
     startSize:
       minMaxState: 0
       scalar: 1
@@ -4132,7 +4147,7 @@ ParticleSystem:
     serializedVersion: 4
     rateOverTime:
       minMaxState: 0
-      scalar: 100
+      scalar: 120
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -6635,10 +6650,10 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1318415056}
   serializedVersion: 5
-  lengthInSec: 5
-  simulationSpeed: 0.5
+  lengthInSec: 3
+  simulationSpeed: 1
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   autoRandomSeed: 0
   startDelay:
@@ -6689,7 +6704,7 @@ ParticleSystem:
     enabled: 1
     startLifetime:
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -6827,7 +6842,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.014503062, g: 0.19117647, b: 0, a: 0.023529412}
+      maxColor: {r: 0.19607843, g: 0, b: 0, a: 0.05882353}
     startSize:
       minMaxState: 0
       scalar: 1
@@ -7063,7 +7078,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 200
+    maxNumParticles: 300
     size3D: 0
     rotation3D: 0
     gravityModifier:
