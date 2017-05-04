@@ -9,18 +9,17 @@ public class MainMenu : MonoBehaviour {
 	GameManager gameManager;
 	public GameObject aboutPanel;
 	public GameObject mainMenuPanel;
+	public GameObject levelPanel;
 
 	void Awake() {
-		gameManager = GameObject.FindGameObjectWithTag ("GameManager").GetComponent<GameManager>();
-	
+		gameManager = GameObject.FindGameObjectWithTag ("GameManager").GetComponent<GameManager>();			
 	}
 
 	public void ButtonMenu(Button button) {
+
 		if (button.name == "Start") {
-			SceneManager.LoadScene ("Main");
-
-			gameManager.gameState = GameManager.GameState.Start;
-
+			levelPanel.SetActive (true);
+			mainMenuPanel.SetActive (false);
 			print ("Starting game");
 		}
 
