@@ -7,9 +7,12 @@ public class PlayerCollision : MonoBehaviour {
 	GameController gameManager;
 	private Transform trans;
 	private Rigidbody2D rigid;
+	private CapsuleCollider2D shipCollider;
+	public float finishDelay;
 
 	// Use this for initialization
 	void Start () {
+		shipCollider = GetComponent<CapsuleCollider2D> ();
 		trans = GetComponent<Transform> ();
 		rigid = GetComponent<Rigidbody2D> ();
 		gameManager = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController> ();
@@ -26,8 +29,18 @@ public class PlayerCollision : MonoBehaviour {
 	}
 	void OnTriggerStay2D(Collider2D other) {
 		if (other.gameObject.tag == "Finish") {
-			rigid.velocity = Vector2.zero;
-			trans.position = Vector2.MoveTowards (trans.position, other.GetComponent<Transform> ().position, 5.0f * Time.deltaTime);
+			if (finishDelay > 0.0f) {
+				finishDelay -= Time.deltaTime;
+				rigid.velocity = Vector2.zero;
+				trans.position = Vector2.Lerp (trans.position, other.GetComponent<Transform> ().position, 0.1f);
+				trans.Rotate (trans.forward * 240 * Time.deltaTime);
+				trans.localScale = Vector3.Lerp (trans.localScale, new Vector3 (0.01f, 0.01f, 0.01f), 0.05f);
+			} else {
+				Destroy (gameObject);
+				Debug.Log ("Level Done!"); // TODO: Show score screen
+				gameManager.endGame();
+				shipCollider.isTrigger = false;
+			}
 		}
 	}
 }

@@ -7,7 +7,10 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Main.unity
-    guid: 00000000000000000000000000000000
+    guid: e36af5f6bb5160247bc4d89e908f8010
   - enabled: 1
     path: Assets/MainMenu.unity
-    guid: 00000000000000000000000000000000
+    guid: ecbfe7a3a0eab4917be402c7266fb752
+  - enabled: 0
+    path: Assets/Danni_mainCopy.unity
+    guid: 636543864ea4abb4380a659faf247031
