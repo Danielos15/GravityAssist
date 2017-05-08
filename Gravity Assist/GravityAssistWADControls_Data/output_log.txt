@@ -1,0 +1,105 @@
+Initialize engine version: 5.6.0f3 (497a0f351392)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon(TM) R5 Graphics (ID=0x9874)
+    Vendor:   ATI
+    VRAM:     2299 MB
+    Driver:   16.101.1201.1007
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Arnar\Desktop\Gravity-Assist-vol2\GravityAssist\Gravity Assist\GravityAssistWADControls_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Arnar\Desktop\Gravity-Assist-vol2\GravityAssist\Gravity Assist\GravityAssistWADControls_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Arnar\Desktop\Gravity-Assist-vol2\GravityAssist\Gravity Assist\GravityAssistWADControls_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Arnar\Desktop\Gravity-Assist-vol2\GravityAssist\Gravity Assist\GravityAssistWADControls_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Arnar\Desktop\Gravity-Assist-vol2\GravityAssist\Gravity Assist\GravityAssistWADControls_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Arnar\Desktop\Gravity-Assist-vol2\GravityAssist\Gravity Assist\GravityAssistWADControls_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Arnar\Desktop\Gravity-Assist-vol2\GravityAssist\Gravity Assist\GravityAssistWADControls_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Arnar\Desktop\Gravity-Assist-vol2\GravityAssist\Gravity Assist\GravityAssistWADControls_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.041 seconds
+Platform assembly: C:\Users\Arnar\Desktop\Gravity-Assist-vol2\GravityAssist\Gravity Assist\GravityAssistWADControls_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Arnar\Desktop\Gravity-Assist-vol2\GravityAssist\Gravity Assist\GravityAssistWADControls_Data\Managed\System.dll (this message is harmless)
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 4800x1350 at 0,0
+<RI> Initialized touch support.
+UnloadTime: 2.122377 ms
+Starting game
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.360445 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 420.
+Total: 0.716863 ms (FindLiveObjects: 0.100454 ms CreateObjectMapping: 0.023938 ms MarkObjects: 0.556135 ms  DeleteObjects: 0.033769 ms)
+
+level_1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.656162 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 432.
+Total: 0.565539 ms (FindLiveObjects: 0.053005 ms CreateObjectMapping: 0.024793 ms MarkObjects: 0.464657 ms  DeleteObjects: 0.021373 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.705321 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 432.
+Total: 0.542029 ms (FindLiveObjects: 0.046166 ms CreateObjectMapping: 0.024793 ms MarkObjects: 0.438154 ms  DeleteObjects: 0.031205 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.540746 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 432.
+Total: 0.539891 ms (FindLiveObjects: 0.049586 ms CreateObjectMapping: 0.023938 ms MarkObjects: 0.456108 ms  DeleteObjects: 0.008976 ms)
+
+level_2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.101156 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 445.
+Total: 0.892980 ms (FindLiveObjects: 0.080363 ms CreateObjectMapping: 0.047448 ms MarkObjects: 0.745503 ms  DeleteObjects: 0.016671 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.945131 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 445.
+Total: 0.829287 ms (FindLiveObjects: 0.068394 ms CreateObjectMapping: 0.047021 ms MarkObjects: 0.700192 ms  DeleteObjects: 0.011541 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.689505 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 445.
+Total: 0.797227 ms (FindLiveObjects: 0.053005 ms CreateObjectMapping: 0.028640 ms MarkObjects: 0.702756 ms  DeleteObjects: 0.011114 ms)
+
+level_3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.681810 ms
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 385.
+Total: 1.195199 ms (FindLiveObjects: 0.053005 ms CreateObjectMapping: 0.030350 ms MarkObjects: 0.542029 ms  DeleteObjects: 0.568532 ms)
+
+about
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+about
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Quitting game
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 32d0 -> priority: 1 
+  Thread -> id: f14 -> priority: 1 

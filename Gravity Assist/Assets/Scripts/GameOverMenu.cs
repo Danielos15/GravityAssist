@@ -11,13 +11,14 @@ public class GameOverMenu : MonoBehaviour {
 
 	public GameObject replayPanel;
 	public GameObject mainMenuPanel;
+	//public GameObject gamePausedPanel;
+
 	public Object nextScene;
 
 	/*void Awake() {
 		gameManager = GameObject.FindGameObjectWithTag ("GameManager").GetComponent<GameManager> ();
 		gameOverPanel = GameObject.FindGameObjectWithTag ("GameOver").GetComponent<GameOverMenu> ();
 	}*/
-
 
 	public void ButtonMenu(Button button) {
 		if (button.name == "MainMenu") {
@@ -32,7 +33,7 @@ public class GameOverMenu : MonoBehaviour {
 			scene = SceneManager.GetActiveScene ();
 			SceneManager.LoadScene (scene.name);
 		}
-
+			
 		if (button.name == "NextLevel") {
 			Debug.Log (SceneManager.GetActiveScene ().name);
 			if (SceneManager.GetActiveScene ().name == "level_1") {
