@@ -22,6 +22,7 @@ public class GameOverMenu : MonoBehaviour {
 
 	public void ButtonMenu(Button button) {
 		if (button.name == "MainMenu") {
+			Time.timeScale = 1;
 			SceneManager.LoadScene ("MainMenu");
 
 			//gameManager.gameState = GameManager.GameState.Start;
@@ -30,11 +31,13 @@ public class GameOverMenu : MonoBehaviour {
 		}
 
 		if (button.name == "Restart") {
+			Time.timeScale = 1;
 			scene = SceneManager.GetActiveScene ();
 			SceneManager.LoadScene (scene.name);
 		}
 			
 		if (button.name == "NextLevel") {
+			Time.timeScale = 1;
 			Debug.Log (SceneManager.GetActiveScene ().name);
 			if (SceneManager.GetActiveScene ().name == "level_1") {
 				SceneManager.LoadScene ("Levels/level_2");
