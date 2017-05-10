@@ -8,7 +8,7 @@ public class ButtonGenerator : MonoBehaviour {
 
 	public GameObject buttonPrefab;
 	public GameObject parent;
-	const int levelCount = 5;
+	const int levelCount = 8;
 	const int add = -75;
 	private LevelSelectMenu test1;
 	public AudioSource audio;
@@ -16,7 +16,7 @@ public class ButtonGenerator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		int x = 1;
-		parent.GetComponent<RectTransform> ().sizeDelta.Set (450, (levelCount * 160));
+		parent.GetComponent<RectTransform> ().sizeDelta = new Vector2(450, (levelCount * 160));
 
 		//parent.GetComponent<RectTransform> ();
 		for (int i = 0; i < levelCount; i++) {

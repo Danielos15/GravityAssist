@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour {
 	public GameObject aboutPanel;
 	public GameObject mainMenuPanel;
 	public GameObject levelPanel;
+	public GameObject settingsPanel;
 
 	void Awake() {
 		gameManager = GameObject.FindGameObjectWithTag ("GameManager").GetComponent<GameManager>();			
@@ -20,7 +21,6 @@ public class MainMenu : MonoBehaviour {
 		if (button.name == "Start") {
 			levelPanel.SetActive (true);
 			mainMenuPanel.SetActive (false);
-			print ("Starting game");
 		}
 
 		if (button.name == "Quit") {
@@ -33,12 +33,22 @@ public class MainMenu : MonoBehaviour {
 			gameManager.gameState = GameManager.GameState.About;
 			aboutPanel.SetActive (true);
 			mainMenuPanel.SetActive (false);
-			print ("about");
+		}
+
+		if (button.name == "Settings") {
+			settingsPanel.SetActive (true);
+			mainMenuPanel.SetActive (false);
 		}
 
 		if (button.name == "BackButton") {
 			gameManager.gameState = GameManager.GameState.Menu;
 			aboutPanel.SetActive (false);
+			mainMenuPanel.SetActive (true);
+		}
+
+		if (button.name == "BackButton2") {
+			gameManager.gameState = GameManager.GameState.Menu;
+			settingsPanel.SetActive (false);
 			mainMenuPanel.SetActive (true);
 		}
 
