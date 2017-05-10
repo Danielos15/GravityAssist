@@ -16,7 +16,7 @@ public class PlayerCollision : MonoBehaviour {
 	private CapsuleCollider2D shipCollider;
 	public float finishDelay;
 
-	private PlayerMovement pm;
+	private PlayerMovementMouse pm;
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +25,7 @@ public class PlayerCollision : MonoBehaviour {
 		rigid = GetComponent<Rigidbody2D> ();
 		gameManager = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController> ();
 
-		pm = GetComponent<PlayerMovement> ();
+		pm = GetComponent<PlayerMovementMouse> ();
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
@@ -51,6 +51,8 @@ public class PlayerCollision : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D other) {
 		if (other.gameObject.tag == "Finish") {
 			if (finishDelay > 0.0f) {
+				pm.SetEndTime (Time.time);
+				gameManager.endGame();
 				finishDelay -= Time.deltaTime;
 				rigid.velocity = Vector2.zero;
 				trans.position = Vector2.Lerp (trans.position, other.GetComponent<Transform> ().position, 0.1f);
@@ -58,10 +60,8 @@ public class PlayerCollision : MonoBehaviour {
 				trans.localScale = Vector3.Lerp (trans.localScale, new Vector3 (0.01f, 0.01f, 0.01f), 0.05f);
 			} else {
 				Destroy (gameObject);
-		
-				gameManager.endGame();
 				shipCollider.isTrigger = false;
-				scoreText.text = "Score: " + Mathf.Round(pm.fuel);
+				scoreText.text = "Score: " + Mathf.Round(pm.GetScore());
 				levelWonPanel.SetActive (true);
 			}
 		}

@@ -20,6 +20,9 @@ public class PlayerMovementMouse : MonoBehaviour {
 	private bool isLaunched = false;
 	private LineRenderer lineRenderer;
 
+	private float startTime;
+	private float endTime;
+
 	// Use this for initialization
 	void Start () {
 		trans = GetComponent<Transform> ();
@@ -30,11 +33,43 @@ public class PlayerMovementMouse : MonoBehaviour {
 		lineRenderer.startWidth = 0.2f;
 		lineRenderer.endWidth = 0.2f;
 	}
-	
+
+	bool GetTouchDown() {
+		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	bool GetTouch() {
+		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	bool GetTouchUp() {
+		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	public float GetScore() {
+		return (endTime - startTime) * 10;
+	}
+
+	public void SetEndTime(float time) {
+		endTime = time;
+	}
+
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetMouseButtonDown(0) && !isLaunched) {
+		if ((Input.GetMouseButtonDown(0) || GetTouchDown()) && !isLaunched) {
 			startPosition = Input.mousePosition;
 			Vector3 startCords = Camera.main.ScreenToWorldPoint (startPosition);
 			startCords.z += 1;
@@ -42,7 +77,7 @@ public class PlayerMovementMouse : MonoBehaviour {
 			lineRenderer.SetPosition (0, startCords);
 		}
 
-		if (Input.GetMouseButton(0) && !isLaunched) {
+		if ((Input.GetMouseButton(0) || GetTouch()) && !isLaunched) {
 			endPosition = Input.mousePosition;
 			Vector3 endCords = Camera.main.ScreenToWorldPoint (endPosition);
 			endCords.z += 1;
@@ -59,11 +94,12 @@ public class PlayerMovementMouse : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetMouseButtonUp(0) && !isLaunched) {
+		if ((Input.GetMouseButtonUp(0) || GetTouchUp()) && !isLaunched) {
 			lineRenderer.enabled = false;
 			if (distance >= fuel) {
 				distance = fuel;
 			}
+			startTime = Time.time;
 
 			Vector2 tempAngle = endPosition - startPosition;
 			float Angle = Mathf.Atan2(tempAngle.y,tempAngle.x);
@@ -74,6 +110,8 @@ public class PlayerMovementMouse : MonoBehaviour {
 			fuel -= distance;
 			isLaunched = true;
 		}
-		trans.up = rigid.velocity;
+		if (gameManager.isStarted ()) {
+			trans.up = rigid.velocity;
+		}
 	}
 }
