@@ -41,5 +41,11 @@ public class MainMenu : MonoBehaviour {
 			aboutPanel.SetActive (false);
 			mainMenuPanel.SetActive (true);
 		}
+
+		if (button.name == "LevelBackButton") {
+			gameManager.gameState = GameManager.GameState.Menu;
+			levelPanel.SetActive (false);
+			mainMenuPanel.SetActive (true);
+		}
 	}
 }
