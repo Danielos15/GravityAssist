@@ -8,7 +8,7 @@ public class ButtonGenerator : MonoBehaviour {
 
 	public GameObject buttonPrefab;
 	public GameObject parent;
-	const int levelCount = 8;
+	const int levelCount = 5;
 	const int add = -75;
 	private LevelSelectMenu test1;
 	public AudioSource audio;
