@@ -9,6 +9,7 @@ public class PlayerCollision : MonoBehaviour {
 	public GameObject gameOverPanel;
 	public GameObject levelWonPanel;
 	public Text scoreText;
+	public GameObject explosion;
 
 	private Transform trans;
 	private Rigidbody2D rigid;
@@ -29,6 +30,7 @@ public class PlayerCollision : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if ((other.gameObject.tag == "Astroid" || other.gameObject.tag == "CelestialObject") && gameManager.isStarted()) {
+			Instantiate (explosion, transform.position, transform.rotation);
 			Destroy (gameObject);
 			gameOverPanel.SetActive(true);
 
