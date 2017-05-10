@@ -20,6 +20,9 @@ public class PlayerMovementMouse : MonoBehaviour {
 	private bool isLaunched = false;
 	private LineRenderer lineRenderer;
 
+	private float startTime;
+	private float endTime;
+
 	// Use this for initialization
 	void Start () {
 		trans = GetComponent<Transform> ();
@@ -55,6 +58,14 @@ public class PlayerMovementMouse : MonoBehaviour {
 		return false;
 	}
 
+	public float GetScore() {
+		return (endTime - startTime) * 10;
+	}
+
+	public void SetEndTime(float time) {
+		endTime = time;
+	}
+
 	// Update is called once per frame
 	void Update () {
 
@@ -88,6 +99,7 @@ public class PlayerMovementMouse : MonoBehaviour {
 			if (distance >= fuel) {
 				distance = fuel;
 			}
+			startTime = Time.time;
 
 			Vector2 tempAngle = endPosition - startPosition;
 			float Angle = Mathf.Atan2(tempAngle.y,tempAngle.x);
@@ -98,6 +110,8 @@ public class PlayerMovementMouse : MonoBehaviour {
 			fuel -= distance;
 			isLaunched = true;
 		}
-		trans.up = rigid.velocity;
+		if (gameManager.isStarted ()) {
+			trans.up = rigid.velocity;
+		}
 	}
 }
