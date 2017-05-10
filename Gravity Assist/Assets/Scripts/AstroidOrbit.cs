@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AstroidOrbit : MonoBehaviour {
 
-
 	public Transform planet;
 	public float speed;
 	private Transform trans;
@@ -13,7 +12,7 @@ public class AstroidOrbit : MonoBehaviour {
 	void Start () {
 		trans = GetComponent<Transform> ();	
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		trans.RotateAround (planet.position, Vector3.forward, speed);

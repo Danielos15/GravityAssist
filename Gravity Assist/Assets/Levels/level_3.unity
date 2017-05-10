@@ -139,6 +139,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114107424144707612, guid: c53e02bc9c64f604094b3e7f0679096a,
+        type: 2}
+      propertyPath: astroids.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224106428872092042, guid: c53e02bc9c64f604094b3e7f0679096a,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -249,6 +254,16 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ButtonMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 114107424144707612, guid: c53e02bc9c64f604094b3e7f0679096a,
+        type: 2}
+      propertyPath: astroid
+      value: 
+      objectReference: {fileID: 374398537}
+    - target: {fileID: 114107424144707612, guid: c53e02bc9c64f604094b3e7f0679096a,
+        type: 2}
+      propertyPath: astroids.Array.data[0]
+      value: 
+      objectReference: {fileID: 374398537}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c53e02bc9c64f604094b3e7f0679096a, type: 2}
   m_IsPrefabParent: 0
@@ -321,6 +336,11 @@ Prefab:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 36400730}
+    - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
+        type: 2}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 159918, guid: de4cf22b8d6af2f41a47538b1ce31d4c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dfb426c5fe0a144382ce04d552e8c31, type: 2}
   m_IsPrefabParent: 0
