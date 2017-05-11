@@ -804,10 +804,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0735a66fb77f644849e40695cf8a7aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aboutPanel: {fileID: 0}
+  aboutPanel: {fileID: 278510499}
   mainMenuPanel: {fileID: 144060692}
-  levelPanel: {fileID: 0}
-  settingsPanel: {fileID: 0}
+  levelPanel: {fileID: 863372689}
+  settingsPanel: {fileID: 1469430219}
 --- !u!114 &301028933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1504,8 +1504,8 @@ MonoBehaviour:
   m_Spacing: 10
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
 --- !u!1 &871253125
 GameObject:
   m_ObjectHideFlags: 0
