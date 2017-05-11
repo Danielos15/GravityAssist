@@ -354,6 +354,8 @@ MonoBehaviour:
   levelWonPanel: {fileID: 0}
   scoreText: {fileID: 0}
   explosion: {fileID: 159918, guid: de4cf22b8d6af2f41a47538b1ce31d4c, type: 2}
+  asteroidExplosion: {fileID: 1850149630429046, guid: 5b5983fef56ff454093a1537da27160b,
+    type: 2}
   explosionSound: {fileID: 0}
   vortexSound: {fileID: 0}
   finishDelay: 1

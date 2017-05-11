@@ -10,6 +10,7 @@ public class PlayerCollision : MonoBehaviour {
 	public GameObject levelWonPanel;
 	public Text scoreText;
 	public GameObject explosion;
+	public GameObject asteroidExplosion;
 	public AudioSource explosionSound;
 	public AudioSource vortexSound;
 
@@ -32,11 +33,22 @@ public class PlayerCollision : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if ((other.gameObject.tag == "Astroid" || other.gameObject.tag == "CelestialObject") && gameManager.isStarted()) {
-			Instantiate (explosion, transform.position, transform.rotation);
-			explosionSound.Play ();
-			Destroy (gameObject);
-			gameOverPanel.SetActive(true);
+		if (gameManager.isStarted()) {
+
+			if (other.gameObject.tag == "Astroid") {
+				Instantiate (asteroidExplosion, transform.position, transform.rotation);
+				Destroy (other.gameObject);
+				explosionSound.Play ();
+				Destroy (gameObject);
+				gameOverPanel.SetActive (true);
+			}
+
+			if (other.gameObject.tag == "CelestialObject") {
+				Instantiate (explosion, transform.position, transform.rotation);
+				explosionSound.Play ();
+				Destroy (gameObject);
+				gameOverPanel.SetActive (true);
+			}
 
 		} else if (other.gameObject.tag == "Finish") {
 			gameManager.endGame ();
