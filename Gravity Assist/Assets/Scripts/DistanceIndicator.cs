@@ -4,25 +4,56 @@ using UnityEngine;
 
 public class DistanceIndicator : MonoBehaviour {
 
-	private bool insideView;
-	private Transform trans;
+	private bool insideView = true;
 	private Camera camera;
 	private float distanceFromEdge;
-	private Transform parentTrans;
+	private Transform spaceship;
+	public GameObject indicator;
+	private GameObject indicatorObject;
+	private Transform indicatorTrans;
+	private float imageWidth;
+	private float imageHeight;
+	private Transform textTrans;
+	private TextMesh textMesh;
 
-	// Use this for initialization
-	void Start () {
-		parentTrans = GetComponentInParent<Transform> ();
+	void Awake () {
+		spaceship = GetComponentInParent<Transform> ();
 		camera = Camera.main;
-		trans = GetComponent<Transform> ();	
+		indicatorObject = Instantiate (indicator);
+		indicatorObject.SetActive (false);
+		indicatorTrans = indicatorObject.GetComponent<Transform> ();
+		imageWidth = (indicatorTrans.GetComponent<SpriteRenderer> ().sprite.rect.width * indicatorTrans.localScale.x) / 3;
+		imageHeight = (indicatorTrans.GetComponent<SpriteRenderer> ().sprite.rect.height * indicatorTrans.localScale.y) / 3;
+		textMesh = indicatorObject.GetComponentInChildren<TextMesh> ();
+		textTrans = indicatorTrans.GetChild (0);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
-		//Debug.Log (camera.ScreenToWorldPoint(parentTrans.position));
+		if (indicatorObject.activeSelf && insideView) {
+			indicatorObject.SetActive (false);
+		}
+
 		if (!insideView) {
-			Debug.Log (camera.WorldToScreenPoint (parentTrans.position));
+			Vector2 cords = camera.WorldToScreenPoint (spaceship.position);
+
+			Vector2 indicatorPos = new Vector2 (
+				Mathf.Clamp (cords.x, imageWidth, camera.pixelWidth - imageWidth),
+				Mathf.Clamp (cords.y, imageHeight, camera.pixelHeight - imageHeight)
+			);
+			Vector3 tempVector = camera.ScreenToWorldPoint(indicatorPos);
+			tempVector.z = 0;
+			indicatorTrans.position = tempVector;
+			Quaternion rotation = CalculateAngle (indicatorTrans.position, spaceship.position);
+			indicatorTrans.rotation = rotation;
+			float distance = Vector2.Distance (indicatorTrans.position, spaceship.position);
+			textMesh.text = distance.ToString("F1");
+			textTrans.localEulerAngles = new Vector3(0, 0, -indicatorTrans.rotation.eulerAngles.z);
+
+			if (!indicatorObject.activeSelf) {
+				indicatorObject.SetActive (true);
+			}
 		}
 	}
 		
@@ -32,5 +63,11 @@ public class DistanceIndicator : MonoBehaviour {
 
 	void OnBecameVisible() {
 		insideView = true;
+	}
+
+	Quaternion CalculateAngle(Vector2 startPosition, Vector2 endPosition) {
+		Vector2 tempAngle = endPosition - startPosition;
+		float rotation = Mathf.Atan2(tempAngle.y,tempAngle.x) * Mathf.Rad2Deg + 90;
+		return Quaternion.Euler(0.0f, 0.0f, rotation);
 	}
 }
