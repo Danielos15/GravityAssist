@@ -16,10 +16,12 @@ public class AudioControls : MonoBehaviour {
 
 	public void musicButtons(Button button){
 		if (button.name == "Mute") {
-			mainMusic.Pause();
+			//mainMusic.Pause();
+			mainMusic.mute = true;
 		}
 		if (button.name == "On") {
-			mainMusic.Play ();
+			//mainMusic.Play ();
+			mainMusic.mute = false;
 		}
 	}
 
