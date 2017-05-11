@@ -17,11 +17,13 @@ public class PlayerCollision : MonoBehaviour {
 	private Rigidbody2D rigid;
 	private CapsuleCollider2D shipCollider;
 	public float finishDelay;
+	private bool hasPlayed;
 
 	private PlayerMovementMouse pm;
 
 	// Use this for initialization
 	void Start () {
+		hasPlayed = false;
 		shipCollider = GetComponent<CapsuleCollider2D> ();
 		trans = GetComponent<Transform> ();
 		rigid = GetComponent<Rigidbody2D> ();
@@ -53,6 +55,10 @@ public class PlayerCollision : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D other) {
 		if (other.gameObject.tag == "Finish") {
 			if (finishDelay > 0.0f) {
+				if (!hasPlayed) {
+					vortexSound.Play ();
+					hasPlayed = true;
+				}
 				pm.SetEndTime (Time.time);
 				gameManager.endGame();
 				finishDelay -= Time.deltaTime;
@@ -60,7 +66,6 @@ public class PlayerCollision : MonoBehaviour {
 				trans.position = Vector2.Lerp (trans.position, other.GetComponent<Transform> ().position, 0.1f);
 				trans.Rotate (trans.forward * 240 * Time.deltaTime);
 				trans.localScale = Vector3.Lerp (trans.localScale, new Vector3 (0.01f, 0.01f, 0.01f), 0.05f);
-				vortexSound.Play ();
 			} else {
 				Destroy (gameObject);
 				shipCollider.isTrigger = false;
