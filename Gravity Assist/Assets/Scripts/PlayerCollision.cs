@@ -24,7 +24,6 @@ public class PlayerCollision : MonoBehaviour {
 		trans = GetComponent<Transform> ();
 		rigid = GetComponent<Rigidbody2D> ();
 		gameManager = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController> ();
-
 		pm = GetComponent<PlayerMovementMouse> ();
 	}
 
