@@ -8,6 +8,7 @@ TagManager:
   - GameManager
   - Astroid
   - OutofBounds
+  - GameOptions
   layers:
   - Default
   - TransparentFX
