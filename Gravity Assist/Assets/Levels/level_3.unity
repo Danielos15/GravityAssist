@@ -209,7 +209,7 @@ Prefab:
         type: 2}
       propertyPath: vortexSound
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 845828622}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dfb426c5fe0a144382ce04d552e8c31, type: 2}
   m_IsPrefabParent: 0
