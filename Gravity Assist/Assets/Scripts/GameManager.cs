@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour {
 		NewGame,	//Load objects into game
 		Start,		//Playing the game
 		Quit,
-		About
+		About,
+		Settings
 	}
 
 	public GameState gameState;
