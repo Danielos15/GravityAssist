@@ -10,6 +10,8 @@ public class PlayerCollision : MonoBehaviour {
 	public GameObject levelWonPanel;
 	public Text scoreText;
 	public GameObject explosion;
+	public AudioSource explosionSound;
+	public AudioSource vortexSound;
 
 	private Transform trans;
 	private Rigidbody2D rigid;
@@ -30,6 +32,7 @@ public class PlayerCollision : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if ((other.gameObject.tag == "Astroid" || other.gameObject.tag == "CelestialObject") && gameManager.isStarted()) {
 			Instantiate (explosion, transform.position, transform.rotation);
+			explosionSound.Play ();
 			Destroy (gameObject);
 			gameOverPanel.SetActive(true);
 
@@ -57,6 +60,7 @@ public class PlayerCollision : MonoBehaviour {
 				trans.position = Vector2.Lerp (trans.position, other.GetComponent<Transform> ().position, 0.1f);
 				trans.Rotate (trans.forward * 240 * Time.deltaTime);
 				trans.localScale = Vector3.Lerp (trans.localScale, new Vector3 (0.01f, 0.01f, 0.01f), 0.05f);
+				vortexSound.Play ();
 			} else {
 				Destroy (gameObject);
 				shipCollider.isTrigger = false;
