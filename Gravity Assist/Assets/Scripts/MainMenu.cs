@@ -24,7 +24,6 @@ public class MainMenu : MonoBehaviour {
 		if (button.name == "Start") {
 			levelPanel.SetActive (true);
 			mainMenuPanel.SetActive (false);
-			print ("Starting game");
 		}
 
 		if (button.name == "Settings") {
@@ -46,7 +45,11 @@ public class MainMenu : MonoBehaviour {
 			gameManager.gameState = GameManager.GameState.About;
 			aboutPanel.SetActive (true);
 			mainMenuPanel.SetActive (false);
-			print ("about");
+		}
+
+		if (button.name == "Settings") {
+			settingsPanel.SetActive (true);
+			mainMenuPanel.SetActive (false);
 		}
 
 		if (button.name == "BackButton") {
@@ -64,6 +67,17 @@ public class MainMenu : MonoBehaviour {
 				settingsIsActive = false;
 			}
 		}
+			
+		if (button.name == "BackButton2") {
+			gameManager.gameState = GameManager.GameState.Menu;
+			settingsPanel.SetActive (false);
+			mainMenuPanel.SetActive (true);
+		}
 
+		if (button.name == "LevelBackButton") {
+			gameManager.gameState = GameManager.GameState.Menu;
+			levelPanel.SetActive (false);
+			mainMenuPanel.SetActive (true);
+		}
 	}
 }
