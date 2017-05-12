@@ -85,7 +85,8 @@ public class MainMenu : MonoBehaviour {
 		if (button.name == "Continue") {
 			string name = startPanel.GetComponentInChildren<InputField> ().text;
 			if (name.Length == 0) {
-				requiredPanel.SetActive (true);
+				// requiredPanel.SetActive (true);
+				// DO NOTHING
 			}
 			if (name.Length > 0) {
 				gameManager.gameState = GameManager.GameState.Menu;
