@@ -9,9 +9,12 @@ public class GameOptions : MonoBehaviour {
 	private string colMusic = "music";
 	private string colSoundEffects = "sound";
 
+	public bool toLevelSelect;
+
 	void Awake() {
 		if (!_instance) {
 			_instance = this;
+			toLevelSelect = false;
 			DontDestroyOnLoad (gameObject);
 		} else {
 			Destroy (gameObject);
@@ -32,7 +35,7 @@ public class GameOptions : MonoBehaviour {
 		return getBool (colMusic);
 	}
 
-	public bool geSoundSettings() {
+	public bool getSoundSettings() {
 		return getBool (colSoundEffects);
 	}
 
