@@ -81,9 +81,9 @@ public class MainMenu : MonoBehaviour {
 				// DO NOTHING
 			}
 			if (name.Length > 0) {
-				Debug.Log (name);
 				startPanel.SetActive (false);
 				mainMenuPanel.SetActive (true);
+				GameOptions.getInstance ().setName (name);
 			}
 		}
 	}
