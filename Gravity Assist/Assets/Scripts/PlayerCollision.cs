@@ -7,7 +7,9 @@ public class PlayerCollision : MonoBehaviour {
 
 	GameController gameManager;
 	public GameObject gameOverPanel;
-	public GameObject levelWonPanel;
+	//public GameObject levelWonPanel;
+	public GameObject leaderboardsPanel;
+
 	public Text scoreText;
 	public GameObject explosion;
 	public GameObject asteroidExplosion;
@@ -82,7 +84,8 @@ public class PlayerCollision : MonoBehaviour {
 				Destroy (gameObject);
 				shipCollider.isTrigger = false;
 				scoreText.text = "Score: " + Mathf.Round(pm.GetScore());
-				levelWonPanel.SetActive (true);
+				//levelWonPanel.SetActive (true);
+				leaderboardsPanel.SetActive (true);
 			}
 		}
 	}

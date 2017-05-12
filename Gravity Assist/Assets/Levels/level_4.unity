@@ -215,6 +215,11 @@ Prefab:
       propertyPath: astroids.Array.data[0]
       value: 
       objectReference: {fileID: 573603092}
+    - target: {fileID: 114812155494039304, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
+        type: 2}
+      propertyPath: leaderboardsPanel
+      value: 
+      objectReference: {fileID: 231559810}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e28401aa52b24b7d8caf5412b3d81d3, type: 2}
   m_IsPrefabParent: 0
@@ -232,6 +237,11 @@ MonoBehaviour:
 --- !u!1 &231559809 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1922866302546828, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
+    type: 2}
+  m_PrefabInternal: {fileID: 231559806}
+--- !u!1 &231559810 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1968234869928294, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
     type: 2}
   m_PrefabInternal: {fileID: 231559806}
 --- !u!1001 &562642925
@@ -318,6 +328,11 @@ Prefab:
       propertyPath: vortexSound
       value: 
       objectReference: {fileID: 1872478860}
+    - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
+        type: 2}
+      propertyPath: leaderboardsPanel
+      value: 
+      objectReference: {fileID: 231559810}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dfb426c5fe0a144382ce04d552e8c31, type: 2}
   m_IsPrefabParent: 0

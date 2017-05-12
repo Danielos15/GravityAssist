@@ -11,6 +11,8 @@ public class GameOverMenu : MonoBehaviour {
 
 	public GameObject replayPanel;
 	public GameObject mainMenuPanel;
+	public GameObject leaderboardsPanel;
+	public GameObject levelWonPanel;
 	//public GameObject gamePausedPanel;
 
 	public Object nextScene;
@@ -53,6 +55,11 @@ public class GameOverMenu : MonoBehaviour {
 			if (SceneManager.GetActiveScene ().name == "level_5") {
 				SceneManager.LoadScene ("MainMenu");
 			}
+		}
+
+		if (button.name == "LeaderBoardsContinue") {
+			leaderboardsPanel.SetActive (false);
+			levelWonPanel.SetActive (true);
 		}
 	}
 
