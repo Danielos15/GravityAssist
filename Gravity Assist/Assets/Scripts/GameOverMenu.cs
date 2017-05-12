@@ -54,6 +54,12 @@ public class GameOverMenu : MonoBehaviour {
 				SceneManager.LoadScene ("MainMenu");
 			}
 		}
+
+		if (button.name == "LevelSelection") {
+			Time.timeScale = 1;
+			GameOptions.getInstance ().toLevelSelect = true;
+			SceneManager.LoadScene ("MainMenu");
+		}
 	}
 
 }
