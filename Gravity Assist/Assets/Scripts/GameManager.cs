@@ -3,31 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-	public enum GameState{
-		Menu,	//default menu state
-		NewGame,	//Load objects into game
-		Start,		//Playing the game
-		Quit,
-		About,
-		Settings
-	}
-
-	public GameState gameState;
-
+	
+	public GameObject aboutPanel;
+	public GameObject mainMenuPanel;
+	public GameObject levelPanel;
+	public GameObject settingsPanel;
+	public GameObject startPanel;
 
 	// Use this for initialization
-	void Start () {
-		gameState = GameState.Menu;
+	void Awake () {
+		aboutPanel.SetActive (false);
+		if (!GameOptions.getInstance().toLevelSelect) {
+			levelPanel.SetActive (false);
+		}
+
+		if (!GameOptions.getInstance ().isNameSet ()) {
+			mainMenuPanel.SetActive (false);
+		} else {
+			startPanel.SetActive (false);
+		}
+
+		settingsPanel.SetActive (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		if (gameState == GameState.NewGame) {
-			//Instantiate the player into the game
-			//(Set camera to his position)
-		}
-
 
 	}
 }

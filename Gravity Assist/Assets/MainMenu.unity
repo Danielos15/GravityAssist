@@ -1116,24 +1116,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c40696f0199648a99fbedfab10e7939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameState: 0
---- !u!114 &651747155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 651747152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0735a66fb77f644849e40695cf8a7aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   aboutPanel: {fileID: 0}
-  mainMenuPanel: {fileID: 144060692}
+  mainMenuPanel: {fileID: 0}
   levelPanel: {fileID: 0}
   settingsPanel: {fileID: 0}
   startPanel: {fileID: 0}
-  requiredPanel: {fileID: 0}
 --- !u!1 &668603041
 GameObject:
   m_ObjectHideFlags: 0
