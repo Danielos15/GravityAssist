@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour {
 	public GameObject mainMenuPanel;
 	public GameObject levelPanel;
 	public GameObject settingsPanel;
+	public GameObject startPanel;
 
 	private bool aboutIsActive;
 	private bool settingsIsActive;
@@ -77,6 +78,14 @@ public class MainMenu : MonoBehaviour {
 		if (button.name == "LevelBackButton") {
 			gameManager.gameState = GameManager.GameState.Menu;
 			levelPanel.SetActive (false);
+			mainMenuPanel.SetActive (true);
+		}
+
+		if (button.name == "Continue") {
+			gameManager.gameState = GameManager.GameState.Menu;
+			string name = startPanel.GetComponentInChildren<InputField> ().text;
+			Debug.Log (name);
+			startPanel.SetActive (false);
 			mainMenuPanel.SetActive (true);
 		}
 	}
