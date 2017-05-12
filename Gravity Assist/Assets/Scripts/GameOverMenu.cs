@@ -57,9 +57,15 @@ public class GameOverMenu : MonoBehaviour {
 			}
 		}
 
+
 		if (button.name == "LeaderBoardsContinue") {
 			leaderboardsPanel.SetActive (false);
 			levelWonPanel.SetActive (true);
+		}
+		if (button.name == "LevelSelection") {
+			Time.timeScale = 1;
+			GameOptions.getInstance ().toLevelSelect = true;
+			SceneManager.LoadScene ("MainMenu");
 		}
 	}
 
