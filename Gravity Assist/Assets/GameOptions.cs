@@ -1,14 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class GameOptions : MonoBehaviour {
 	private static GameOptions _instance;
 
 	private string colPlayerName = "playerName";
+	private string colPlayerId = "playerId";
 	private string colMusic = "music";
 	private string colSoundEffects = "sound";
 	private string colHasPlayed = "hasPlayed";
+
+	private string serverName = "https://gravityassist.000webhostapp.com";
 
 	public bool toLevelSelect;
 	private bool hasPlayed;
@@ -29,6 +34,10 @@ public class GameOptions : MonoBehaviour {
 
 
 	// GETTERS
+	public int getId() {
+		return getInt (colPlayerId);
+	}
+
 	public string getName() {
 		return getString (colPlayerName);
 	}
@@ -51,8 +60,13 @@ public class GameOptions : MonoBehaviour {
 
 
 	// SETTERS
+	public void setId(int id) {
+		saveInt (colPlayerId, id);
+	}
+
 	public void setName(string name) {
 		saveString (colPlayerName, name);
+		StartCoroutine (getIdFromServer ());
 	}
 
 	public void setHasPlayed(bool b) {
@@ -67,9 +81,11 @@ public class GameOptions : MonoBehaviour {
 		saveBool (colSoundEffects, b);
 	}
 
-	public void setBestScoreForLevel(string levelName, int score) {
+	public void setBestScoreForLevel(int score) {
+		string levelName = SceneManager.GetActiveScene ().name;
 		if (isScoreBetter(levelName, score)) {
 			saveInt (levelName, score);
+			StartCoroutine (SendScoreToServer (score));
 		}
 	}
 
@@ -125,5 +141,44 @@ public class GameOptions : MonoBehaviour {
 	//Save to file
 	private void save() {
 		PlayerPrefs.Save ();
+	}
+
+	// Networking
+	IEnumerator getIdFromServer() {
+		WWWForm form = new WWWForm();
+		form.AddField( "name", getName() );
+		UnityWebRequest www = UnityWebRequest.Post(serverName + "/user", form);
+
+		yield return www.Send();
+
+		if(www.isError) {
+			Debug.Log(www.error);
+		}
+		else {
+			ServerRequest request = JsonUtility.FromJson<ServerRequest>(www.downloadHandler.text);
+			if (request.success) {
+				setId (request.id);
+			}
+		}
+	}
+
+	IEnumerator SendScoreToServer(int score) {
+		WWWForm form = new WWWForm();
+		form.AddField( "score", score );
+		UnityWebRequest www = UnityWebRequest.Post(serverName + "/score/" + SceneManager.GetActiveScene().name + "/" + getId(), form);
+
+		yield return www.Send();
+
+		if(www.isError) {
+			Debug.Log(www.error);
+		}
+		else {
+
+			Debug.Log (www.downloadHandler.text);
+			ServerRequest request = JsonUtility.FromJson<ServerRequest>(www.downloadHandler.text);
+			if (!request.success) {
+				// TODO Check if it was not sent.
+			}
+		}
 	}
 }
