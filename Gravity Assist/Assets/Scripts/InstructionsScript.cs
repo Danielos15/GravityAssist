@@ -9,6 +9,7 @@ public class InstructionsScript : MonoBehaviour {
 	Color end;
 	float duration = 6;
 	float t = 0.005f;
+	bool hasPlayed;
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +26,6 @@ public class InstructionsScript : MonoBehaviour {
 
 	void ChangeColor() {
 		instructions.GetComponent<TextMesh> ().color = Color.Lerp (start, end, t);
-		Debug.Log (t);
 		if (t < 1) {
 			t += Time.deltaTime / duration;
 		}
