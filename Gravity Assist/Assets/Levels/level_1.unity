@@ -504,6 +504,11 @@ Prefab:
       propertyPath: vortexSound
       value: 
       objectReference: {fileID: 117584487}
+    - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
+        type: 2}
+      propertyPath: leaderboardsPanel
+      value: 
+      objectReference: {fileID: 779625641}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dfb426c5fe0a144382ce04d552e8c31, type: 2}
   m_IsPrefabParent: 0
@@ -944,6 +949,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e28401aa52b24b7d8caf5412b3d81d3, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &779625641 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1968234869928294, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
+    type: 2}
+  m_PrefabInternal: {fileID: 779625640}
 --- !u!1001 &1010880380
 Prefab:
   m_ObjectHideFlags: 0
