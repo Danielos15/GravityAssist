@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class imageChange : MonoBehaviour {
 	public GameObject image;
-	float duration = 6;
+	float duration = 8;
 	float t = 0.005f;
 	Color end;
 	public Color start;
@@ -19,9 +19,9 @@ public class imageChange : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		image.GetComponent<SpriteRenderer>().color= Color.Lerp (start, end, t);
+			image.GetComponent<SpriteRenderer> ().color = Color.Lerp (start, end, t);
 			if (t < 1) {
 				t += Time.deltaTime / duration;
 			}
-		}
+	}
 }

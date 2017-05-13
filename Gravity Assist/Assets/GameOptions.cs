@@ -8,8 +8,10 @@ public class GameOptions : MonoBehaviour {
 	private string colPlayerName = "playerName";
 	private string colMusic = "music";
 	private string colSoundEffects = "sound";
+	private string colHasPlayed = "hasPlayed";
 
 	public bool toLevelSelect;
+	private bool hasPlayed;
 
 	void Awake() {
 		if (!_instance) {
@@ -35,6 +37,10 @@ public class GameOptions : MonoBehaviour {
 		return getBool (colMusic);
 	}
 
+	public bool getHasPlayed() {
+		return getBool (colHasPlayed);
+	}
+
 	public bool getSoundSettings() {
 		return getBool (colSoundEffects);
 	}
@@ -47,6 +53,10 @@ public class GameOptions : MonoBehaviour {
 	// SETTERS
 	public void setName(string name) {
 		saveString (colPlayerName, name);
+	}
+
+	public void setHasPlayed(bool b) {
+		saveBool (colHasPlayed, b);
 	}
 
 	public void setMusicSettings(bool b) {

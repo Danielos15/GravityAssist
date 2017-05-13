@@ -226,6 +226,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 98663430}
+  - component: {fileID: 98663432}
+  - component: {fileID: 98663431}
   m_Layer: 0
   m_Name: Instructions
   m_TagString: Untagged
@@ -250,6 +252,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &98663431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 98663429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b196285a7240477593bd07c5e1d71f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 297224385}
+  start: {r: 1, g: 0, b: 0, a: 0.9607843}
+--- !u!114 &98663432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 98663429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad467449cb6f34891a870ae1ac148bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launchInstructions: {fileID: 1301303598}
+  gravityInstructions: {fileID: 1134496780}
+  endGate: {fileID: 747499996}
+  start: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &112017296 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1864821388146166, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
@@ -321,7 +351,6 @@ GameObject:
   m_Component:
   - component: {fileID: 297224386}
   - component: {fileID: 297224387}
-  - component: {fileID: 297224388}
   m_Layer: 5
   m_Name: Arrow
   m_TagString: Untagged
@@ -382,19 +411,6 @@ SpriteRenderer:
   m_Size: {x: 2.55, y: 2.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
---- !u!114 &297224388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 297224385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b196285a7240477593bd07c5e1d71f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image: {fileID: 297224385}
-  start: {r: 1, g: 0, b: 0, a: 0.9607843}
 --- !u!1001 &562642925
 Prefab:
   m_ObjectHideFlags: 0
@@ -571,7 +587,6 @@ GameObject:
   - component: {fileID: 747500000}
   - component: {fileID: 747499999}
   - component: {fileID: 747499998}
-  - component: {fileID: 747500001}
   m_Layer: 5
   m_Name: EndGoal
   m_TagString: Untagged
@@ -656,19 +671,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 747499996}
---- !u!114 &747500001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 747499996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad467449cb6f34891a870ae1ac148bde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instructions: {fileID: 747499996}
-  start: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &771638596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1062,6 @@ GameObject:
   - component: {fileID: 1134496784}
   - component: {fileID: 1134496783}
   - component: {fileID: 1134496782}
-  - component: {fileID: 1134496785}
   m_Layer: 5
   m_Name: GravityInstructions
   m_TagString: Untagged
@@ -1151,19 +1152,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1134496780}
---- !u!114 &1134496785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1134496780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad467449cb6f34891a870ae1ac148bde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instructions: {fileID: 1134496780}
-  start: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1301303598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,7 +1163,6 @@ GameObject:
   - component: {fileID: 1301303602}
   - component: {fileID: 1301303601}
   - component: {fileID: 1301303600}
-  - component: {fileID: 1301303603}
   m_Layer: 5
   m_Name: LaunchInstructions
   m_TagString: Untagged
@@ -1260,19 +1247,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1301303598}
---- !u!114 &1301303603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1301303598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad467449cb6f34891a870ae1ac148bde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instructions: {fileID: 1301303598}
-  start: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &1321817749 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114276745316227492, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
