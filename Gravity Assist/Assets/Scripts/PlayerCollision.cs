@@ -83,7 +83,9 @@ public class PlayerCollision : MonoBehaviour {
 			} else {
 				Destroy (gameObject);
 				shipCollider.isTrigger = false;
-				scoreText.text = "Score: " + Mathf.Round(pm.GetScore());
+				int score = (int) Mathf.Round(pm.GetScore());
+				scoreText.text = "Score: " + score;
+				GameOptions.getInstance ().setBestScoreForLevel (score);
 				//levelWonPanel.SetActive (true);
 				leaderboardsPanel.SetActive (true);
 			}
