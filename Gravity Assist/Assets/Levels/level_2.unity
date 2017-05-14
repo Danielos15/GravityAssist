@@ -147,21 +147,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114945068495044570, guid: 1dfb426c5fe0a144382ce04d552e8c31,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114402424071299098, guid: 1dfb426c5fe0a144382ce04d552e8c31,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
-        type: 2}
-      propertyPath: finishDelay
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
         type: 2}
       propertyPath: gameOverPanel
@@ -169,19 +154,19 @@ Prefab:
       objectReference: {fileID: 1271040890}
     - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
         type: 2}
-      propertyPath: levelWonPanel
+      propertyPath: leaderboardsPanel
       value: 
-      objectReference: {fileID: 1271040892}
+      objectReference: {fileID: 1188030937}
     - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
         type: 2}
-      propertyPath: scoreText
+      propertyPath: scoreTexts.Array.data[0]
       value: 
       objectReference: {fileID: 1271040891}
     - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
         type: 2}
-      propertyPath: explosion
+      propertyPath: scoreTexts.Array.data[1]
       value: 
-      objectReference: {fileID: 159918, guid: de4cf22b8d6af2f41a47538b1ce31d4c, type: 2}
+      objectReference: {fileID: 1271040893}
     - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
         type: 2}
       propertyPath: explosionSound
@@ -192,31 +177,9 @@ Prefab:
       propertyPath: vortexSound
       value: 
       objectReference: {fileID: 1821473883}
-    - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
-        type: 2}
-      propertyPath: leaderboardsPanel
-      value: 
-      objectReference: {fileID: 1188030937}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dfb426c5fe0a144382ce04d552e8c31, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &562642926 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1675493823558124, guid: 1dfb426c5fe0a144382ce04d552e8c31,
-    type: 2}
-  m_PrefabInternal: {fileID: 562642925}
---- !u!114 &562642927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 562642926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f86e685769c5fc4c84185cd995af79f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  indicator: {fileID: 1715269465726300, guid: 957cece9ae9474543879d4aa3bb8cf56, type: 2}
 --- !u!1 &672183641
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,11 +712,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1271040889}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!1 &1271040892 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1922866302546828, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
+--- !u!114 &1271040893 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114657591146022740, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
     type: 2}
   m_PrefabInternal: {fileID: 1271040889}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1530718417
 GameObject:
   m_ObjectHideFlags: 0

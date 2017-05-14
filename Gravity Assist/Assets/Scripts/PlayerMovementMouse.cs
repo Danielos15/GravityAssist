@@ -84,7 +84,7 @@ public class PlayerMovementMouse : MonoBehaviour {
 			lineRenderer.SetPosition (1, endCords);
 
 			distance = Vector2.Distance (startPosition, endPosition);
-			distance /= 2;
+			distance /= 4;
 			if (distance >= fuel) {
 				lineRenderer.startColor = notOkayColor;
 				lineRenderer.endColor = notOkayColor;

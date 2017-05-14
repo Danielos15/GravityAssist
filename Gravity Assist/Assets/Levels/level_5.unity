@@ -259,6 +259,16 @@ Prefab:
       propertyPath: leaderboardsPanel
       value: 
       objectReference: {fileID: 1395811400}
+    - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
+        type: 2}
+      propertyPath: scoreTexts.Array.data[0]
+      value: 
+      objectReference: {fileID: 929624520}
+    - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
+        type: 2}
+      propertyPath: scoreTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1395811401}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dfb426c5fe0a144382ce04d552e8c31, type: 2}
   m_IsPrefabParent: 0
@@ -779,6 +789,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1968234869928294, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
     type: 2}
   m_PrefabInternal: {fileID: 1395811399}
+--- !u!114 &1395811401 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114657591146022740, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1395811399}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1530718417
 GameObject:
   m_ObjectHideFlags: 0

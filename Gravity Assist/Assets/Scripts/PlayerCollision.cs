@@ -10,7 +10,8 @@ public class PlayerCollision : MonoBehaviour {
 	//public GameObject levelWonPanel;
 	public GameObject leaderboardsPanel;
 
-	public Text scoreText;
+	//public Text scoreText;
+	public Text[] scoreTexts;
 	public GameObject explosion;
 	public GameObject asteroidExplosion;
 	public AudioSource explosionSound;
@@ -84,7 +85,9 @@ public class PlayerCollision : MonoBehaviour {
 				Destroy (gameObject);
 				shipCollider.isTrigger = false;
 				int score = (int) Mathf.Round(pm.GetScore());
-				scoreText.text = "Score: " + score;
+				foreach (Text scoreText in scoreTexts) {
+					scoreText.text = "Score: " + score;
+				}
 				GameOptions.getInstance ().setBestScoreForLevel (score);
 				//levelWonPanel.SetActive (true);
 				leaderboardsPanel.SetActive (true);

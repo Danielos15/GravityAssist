@@ -411,12 +411,6 @@ SpriteRenderer:
   m_Size: {x: 2.55, y: 2.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
---- !u!114 &399999551 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114276745316227492, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
-    type: 2}
-  m_PrefabInternal: {fileID: 1229242219}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &562642925
 Prefab:
   m_ObjectHideFlags: 0
@@ -456,21 +450,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114945068495044570, guid: 1dfb426c5fe0a144382ce04d552e8c31,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114402424071299098, guid: 1dfb426c5fe0a144382ce04d552e8c31,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
-        type: 2}
-      propertyPath: finishDelay
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
         type: 2}
       propertyPath: gameOverPanel
@@ -478,28 +457,19 @@ Prefab:
       objectReference: {fileID: 720292467}
     - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
         type: 2}
-      propertyPath: levelWonPanel
+      propertyPath: leaderboardsPanel
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 774942615}
     - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
         type: 2}
-      propertyPath: scoreText
+      propertyPath: scoreTexts.Array.data[0]
       value: 
-      objectReference: {fileID: 399999551}
-    - target: {fileID: 70251855736028706, guid: 1dfb426c5fe0a144382ce04d552e8c31,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1690587047500070, guid: 1dfb426c5fe0a144382ce04d552e8c31, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1229242220}
     - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
         type: 2}
-      propertyPath: explosion
+      propertyPath: scoreTexts.Array.data[1]
       value: 
-      objectReference: {fileID: 159918, guid: de4cf22b8d6af2f41a47538b1ce31d4c, type: 2}
+      objectReference: {fileID: 1331410294}
     - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
         type: 2}
       propertyPath: explosionSound
@@ -510,11 +480,6 @@ Prefab:
       propertyPath: vortexSound
       value: 
       objectReference: {fileID: 117584487}
-    - target: {fileID: 114537314926967696, guid: 1dfb426c5fe0a144382ce04d552e8c31,
-        type: 2}
-      propertyPath: leaderboardsPanel
-      value: 
-      objectReference: {fileID: 774942615}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1dfb426c5fe0a144382ce04d552e8c31, type: 2}
   m_IsPrefabParent: 0
@@ -1168,6 +1133,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e28401aa52b24b7d8caf5412b3d81d3, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1229242220 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114276745316227492, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1229242219}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1301303598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,6 +1234,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1301303598}
+--- !u!114 &1331410294 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114657591146022740, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1229242219}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1530718417
 GameObject:
   m_ObjectHideFlags: 0
