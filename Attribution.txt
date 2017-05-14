@@ -23,3 +23,15 @@ Menu Background Image: 		Oreon Nebula Infrared - https://photojournal.jpl.nasa.g
 Font: 						Orbitron - Google Fonts - https://fonts.google.com/specimen/Orbitron
 
 Warped Fantasy Music Pack - https://www.assetstore.unity3d.com/en/#!/content/49914
+
+Loading Arrow Image:   https://commons.wikimedia.org/wiki/File:Loading.svg
+
+Planetary Textures:
+  http://freebitmaps.blogspot.is/2010/10/srgb-planet-ako.html
+  http://freebitmaps.blogspot.is/2010/10/srgb-planet-spot.html
+  http://freebitmaps.blogspot.is/2010/10/srgb-planet-rim.html
+  http://freebitmaps.blogspot.is/2010/10/srgb-planet-dust.html
+  http://freebitmaps.blogspot.is/2010/10/srgb-planet-dante.html
+  http://freebitmaps.blogspot.is/2010/10/srgb-planet-reststop.html
+  
+Spaceship Model:   https://www.turbosquid.com/3d-models/ready-games-real-time-max-free/564704
