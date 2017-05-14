@@ -15,6 +15,7 @@ TagManager:
   - ScoreList
   - LoadingIcon
   - ScoreText
+  - ServerErrorText
   layers:
   - Default
   - TransparentFX

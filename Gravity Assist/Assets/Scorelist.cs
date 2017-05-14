@@ -29,6 +29,7 @@ public class Scorelist : MonoBehaviour {
 			test.transform.SetParent (this.transform);
 		}
 		Destroy (GameObject.FindGameObjectWithTag ("LoadingIcon"));
+		Destroy (GameObject.FindGameObjectWithTag ("ServerErrorText"));
 		return pos;
 	}
 }
