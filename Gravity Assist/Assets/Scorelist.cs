@@ -13,7 +13,7 @@ public class Scorelist : MonoBehaviour {
 	}
 
 	public int setScore(Score[] scores) {
-		int pos = 1;
+		int pos = 0;
 		foreach(Score score in scores) {
 			pos += 1;
 			GameObject test = Instantiate (scorePrefab);
