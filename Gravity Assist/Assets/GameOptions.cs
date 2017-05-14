@@ -83,9 +83,11 @@ public class GameOptions : MonoBehaviour {
 
 	public void setBestScoreForLevel(int score) {
 		string levelName = SceneManager.GetActiveScene ().name;
-		if (isScoreBetter(levelName, score)) {
+		if (isScoreBetter (levelName, score)) {
 			saveInt (levelName, score);
 			StartCoroutine (SendScoreToServer (score));
+		} else {
+			StartCoroutine (getScoreFromServerByLevel());
 		}
 	}
 
@@ -177,8 +179,29 @@ public class GameOptions : MonoBehaviour {
 
 			Debug.Log (www.downloadHandler.text);
 			ServerRequest request = JsonUtility.FromJson<ServerRequest>(www.downloadHandler.text);
+			StartCoroutine (getScoreFromServerByLevel());
 			if (!request.success) {
 				// TODO Check if it was not successfull.
+			}
+		}
+	}
+
+	IEnumerator getScoreFromServerByLevel() {
+		UnityWebRequest www = UnityWebRequest.Get(serverName + "/score/" + SceneManager.GetActiveScene().name);
+
+		yield return www.Send();
+
+		if(www.isError) {
+			Debug.Log(www.error);
+			// TODO Check if it was not successfull
+		}
+		else {
+			Debug.Log (www.downloadHandler.text);
+			Score[] scores = JsonHelper.FromJson<Score>(www.downloadHandler.text);
+			if (scores.Length > 0) {
+				GameObject scoreList = GameObject.FindGameObjectWithTag ("ScoreList");
+				scoreList.GetComponent<Scorelist> ().setScore (scores);
+
 			}
 		}
 	}
