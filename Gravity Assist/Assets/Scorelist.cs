@@ -23,7 +23,7 @@ public class Scorelist : MonoBehaviour {
 
 			test.transform.SetParent (this.transform);
 		}
-		// Disable the Loading
+		Destroy (GameObject.FindGameObjectWithTag ("LoadingIcon"));
 		return pos;
 	}
 }

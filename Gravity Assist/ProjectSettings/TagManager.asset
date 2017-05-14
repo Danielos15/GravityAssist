@@ -13,6 +13,7 @@ TagManager:
   - Name
   - Score
   - ScoreList
+  - LoadingIcon
   layers:
   - Default
   - TransparentFX
