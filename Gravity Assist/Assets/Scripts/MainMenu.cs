@@ -42,11 +42,11 @@ public class MainMenu : MonoBehaviour {
 
 		if (button.name == "YesClear") {
 			PlayerPrefs.DeleteAll ();
+			startPanel.SetActive (true);
 			clearProgressPanel.SetActive (false);
-			settingsPanel.SetActive (true);
 		} 
 
-		if(button.name == "NoClear") {
+		if (button.name == "NoClear") {
 			clearProgressPanel.SetActive (false);
 			settingsPanel.SetActive (true);
 		}
