@@ -53,6 +53,15 @@ public class GameOverMenu : MonoBehaviour {
 				SceneManager.LoadScene ("Levels/level_5");
 			}
 			if (SceneManager.GetActiveScene ().name == "level_5") {
+				SceneManager.LoadScene ("Levels/level_6");
+			}
+			if (SceneManager.GetActiveScene ().name == "level_6") {
+				SceneManager.LoadScene ("Levels/level_7");
+			}
+			if (SceneManager.GetActiveScene ().name == "level_7") {
+				SceneManager.LoadScene ("Levels/level_8");
+			}
+			if (SceneManager.GetActiveScene ().name == "level_8") {
 				SceneManager.LoadScene ("MainMenu");
 			}
 		}

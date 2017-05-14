@@ -442,6 +442,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114608944252329150, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
+        type: 2}
+      propertyPath: astroids.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 224603783480730916, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -537,6 +542,16 @@ Prefab:
       propertyPath: leaderboardsPanel
       value: 
       objectReference: {fileID: 95983994}
+    - target: {fileID: 114608944252329150, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
+        type: 2}
+      propertyPath: astroids.Array.data[0]
+      value: 
+      objectReference: {fileID: 1846669714}
+    - target: {fileID: 114608944252329150, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
+        type: 2}
+      propertyPath: astroids.Array.data[1]
+      value: 
+      objectReference: {fileID: 1450489843}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e28401aa52b24b7d8caf5412b3d81d3, type: 2}
   m_IsPrefabParent: 0

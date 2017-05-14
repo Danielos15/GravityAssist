@@ -656,7 +656,7 @@ Prefab:
     - target: {fileID: 114608944252329150, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
         type: 2}
       propertyPath: astroids.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224603783480730916, guid: 6e28401aa52b24b7d8caf5412b3d81d3,
         type: 2}
