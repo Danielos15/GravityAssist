@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour {
 	public GameObject settingsPanel;
 	public GameObject startPanel;
 	public GameObject requiredPanel;
+	public GameObject clearProgressPanel;
 
 	private bool aboutIsActive;
 	private bool settingsIsActive;
@@ -33,6 +34,23 @@ public class MainMenu : MonoBehaviour {
 			mainMenuPanel.SetActive (false);
 			print ("Settings");
 		}
+
+		if (button.name == "Clear") {
+			clearProgressPanel.SetActive (true);
+			settingsPanel.SetActive (false);
+		}
+
+		if (button.name == "YesClear") {
+			PlayerPrefs.DeleteAll ();
+			clearProgressPanel.SetActive (false);
+			settingsPanel.SetActive (true);
+		} 
+
+		if(button.name == "NoClear") {
+			clearProgressPanel.SetActive (false);
+			settingsPanel.SetActive (true);
+		}
+
 
 		if (button.name == "Quit") {
 			Application.Quit ();
