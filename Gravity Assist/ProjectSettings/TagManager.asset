@@ -9,6 +9,10 @@ TagManager:
   - Astroid
   - OutofBounds
   - GameOptions
+  - Place
+  - Name
+  - Score
+  - ScoreList
   layers:
   - Default
   - TransparentFX
