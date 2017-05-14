@@ -1,0 +1,25 @@
+Asset Store:
+
+Main Menu Music:			Dark Sci-Fi Music Pack - https://www.assetstore.unity3d.com/en/#!/content/49862
+
+Sound Icons:  				Flat Icoon & UI - 2D Puzzle Game UI - https://www.assetstore.unity3d.com/en/#!/content/69370
+
+Vortex Sound:				Bit Blitzer - https://www.assetstore.unity3d.com/en/#!/content/35094
+
+Pause Icon:					Pause Button Kit - https://www.assetstore.unity3d.com/en/#!/content/67203
+
+Button Sound:				Retro UI Sounds - https://www.assetstore.unity3d.com/en/#!/content/48837
+
+Asteroids:					Asteroids Pack - https://www.assetstore.unity3d.com/en/#!/content/84988
+
+Explosion Animation:		Explosive Realistic VFX Teaxture Free - https://www.assetstore.unity3d.com/en/#!/content/34541
+
+Asteroids explosion:		Space Shooter tutorial (part_glow, part_shockwave, part_sparkTrails) - https://www.assetstore.unity3d.com/en/#!/content/13866?_ga=2.171873312.1414431937.1494798430-162764540.1491523705
+
+On hit Explosion sound: 	Arcade SFX Free - https://www.assetstore.unity3d.com/en/#!/content/42983
+
+Menu Background Image: 		Oreon Nebula Infrared - https://photojournal.jpl.nasa.gov/jpeg/PIA08653.jpg
+
+Font: 						Orbitron - Google Fonts - https://fonts.google.com/specimen/Orbitron
+
+Warped Fantasy Music Pack - https://www.assetstore.unity3d.com/en/#!/content/49914
