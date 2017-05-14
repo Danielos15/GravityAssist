@@ -171,13 +171,14 @@ public class GameOptions : MonoBehaviour {
 
 		if(www.isError) {
 			Debug.Log(www.error);
+			// TODO Check if it was not successfull
 		}
 		else {
 
 			Debug.Log (www.downloadHandler.text);
 			ServerRequest request = JsonUtility.FromJson<ServerRequest>(www.downloadHandler.text);
 			if (!request.success) {
-				// TODO Check if it was not sent.
+				// TODO Check if it was not successfull.
 			}
 		}
 	}
